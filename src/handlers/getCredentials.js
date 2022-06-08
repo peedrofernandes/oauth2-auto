@@ -27,7 +27,7 @@ async function tryToReadLocalCredentialsFile(filePath) {
 }
 
 async function getCredentials(filePath) {
-  const credentials = await tryToReadLocalCredentialsFile(filePath);
+  let credentials = await tryToReadLocalCredentialsFile(filePath);
 
   if (credentials) {
     console.log("- A local credential file was found with the following parameters: \n");
